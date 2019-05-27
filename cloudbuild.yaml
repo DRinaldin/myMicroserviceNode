@@ -1,13 +1,13 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/NodeMicroservices/mymicroservicenode', '.']
+  args: ['build', '-t', 'gcr.io/node-microservices/mymicroservicenode', '.']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/NodeMicroservices/mymicroservicenode']
+  args: ['push', 'gcr.io/node-microservices/mymicroservicenode']
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['set', 'image', 'deployment/mymicroservicenode', 'mymicroservicenode=gcr.io/NodeMicroservices/mymicroservicenode']
+  args: ['set', 'image', 'deployment/mymicroservicenode', 'mymicroservicenode=gcr.io/node-microservices/mymicroservicenode']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=southamerica-east1'
   - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1'
 tags: ['drteste', 'mymicroservicenode']
-images: ['gcr.io/NodeMicroservices/mymicroservicenode']
+images: ['gcr.io/node-microservices/mymicroservicenode']
