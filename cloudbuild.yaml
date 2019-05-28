@@ -7,7 +7,7 @@ steps:
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['set', 'image', 'deployment/mymicroservicenode', 'mymicroservicenode=gcr.io/tonal-run-241311/mymicroservicenode']
   env:
-  - 'CLOUDSDK_COMPUTE_ZONE=southamerica-east1'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1'
+  - 'CLOUDSDK_COMPUTE_ZONE=southamerica-east1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1-a'
 tags: ['drteste', 'mymicroservicenode']
 images: ['gcr.io/tonal-run-241311/mymicroservicenode']
