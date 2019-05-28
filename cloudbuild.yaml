@@ -5,14 +5,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/tonal-run-241311/mymicroservicenode']
 - name: 'gcr.io/cloud-builders/kubectl'
-  args:
-  - set
-  - image
-  - deployment
-  - mymicroservicenode
-  - mymicroservicenode=gcr.io/tonal-run-241311/mymicroservicenode
-  - --namespace
-  - mymicroservicenode
+  args: ['set', 'image', 'deployment/mymicroservicenode', 'mymicroservicenode=gcr.io/tonal-run-241311/mymicroservicenode']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=southamerica-east1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1'
