@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "clean": "rmdir /S /Q package && mkdir package",
+    "clean": "rm -rf package && mkdir package",
     "package-babel": "babel -d ./package ./src -s",
     "build": "npm run clean && npm run package-babel",
     "start": "node app.js",
