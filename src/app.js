@@ -14,6 +14,8 @@ router.post('/values', async function(request, response)
 	var startDate = new Date();
 	var data = request.body;
 	var sum = data.value1 + data.value2;
+	console.log("Value1: " + data.value1);
+	console.log("Value2: " + data.value2);
 	var endDate   = new Date();
 	var milliseconds = ((endDate.getTime() - startDate.getTime()) / 1000)/1000;
 	var message = {
