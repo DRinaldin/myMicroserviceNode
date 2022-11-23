@@ -21,7 +21,7 @@ router.post('/values', async function(request, response)
 	var message = {
 		"sum": sum,
 		"millisecondsElapsed": milliseconds,
-		"disclaimer": "API created with Node.js - nova alteração na master "
+		"disclaimer": "API created with Node.js - nova alteração na master"
 	};
 	response.status(200);
 	response.send(message);
